@@ -42,7 +42,7 @@ export default class Content {
         res.write("\n\n6.feladat:");
         res.write(`\nAz utolso telefonalo adatai a(z) ${megold.utolso[0]}. sorban vannak, ${megold.utolso[1]} masodpercig vart.`);
         megold.file();
-        res.write("<a href='https://github.com/krdsrl/KR13ATelefonosUgyfelszolgalat'>GIT</a>");
+        res.write("\n<a href='https://github.com/krdsrl/KR13ATelefonosUgyfelszolgalat'>GIT</a>&nbsp;");
         res.write("<a href='https://kr13atelefonosugyfelszolgalat.herokuapp.com'>Heroku</a>");
         // <---- Fejezd be a kódolást
 
