@@ -27,6 +27,8 @@ export default class Content {
         const megold = new Megoldas();
         res.write("<h1>Telefonos ügyfélszolgálat</h1>");
         res.write("<h2>Készítette: Kardos Raul</h2>");
+        res.write("\n<a href='https://github.com/krdsrl/KR13ATelefonosUgyfelszolgalat'>GIT</a>&nbsp;");
+        res.write("<a href='https://kr13atelefonosugyfelszolgalat.herokuapp.com'>Heroku</a>\n\n");
         res.write("3. feladat:\n");
         megold.stat.forEach(i => {
             res.write(`${i}\n`);
@@ -41,9 +43,10 @@ export default class Content {
         }
         res.write("\n\n6.feladat:");
         res.write(`\nAz utolso telefonalo adatai a(z) ${megold.utolso[0]}. sorban vannak, ${megold.utolso[1]} masodpercig vart.`);
-        megold.file();
-        res.write("\n<a href='https://github.com/krdsrl/KR13ATelefonosUgyfelszolgalat'>GIT</a>&nbsp;");
-        res.write("<a href='https://kr13atelefonosugyfelszolgalat.herokuapp.com'>Heroku</a>");
+        megold.file;
+        res.write("\n\n7.feladat: A 'sikeres.txt' tartalma:\n");
+        res.write(megold.file);
+      
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form>");

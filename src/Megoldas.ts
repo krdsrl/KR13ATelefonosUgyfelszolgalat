@@ -77,7 +77,7 @@ export default class Megoldas {
         }
         return [this._indexUtolso + 1, this.mpbe(bg.getHours(), bg.getMinutes(), bg.getSeconds()) - this.mpbe(this._l[this._indexUtolso].hivasKezdeteOra, this._l[this._indexUtolso].hivasKezdetePerc, this._l[this._indexUtolso].hivasKezdeteMasodperc)];
     }
-    public file(): void {
+    public get file(): string {
         const t2: string[] = [];
         let s4: Date = new Date(1, 1, 1, 0, 1, 1);
         let elso: boolean = true;
@@ -97,6 +97,7 @@ export default class Megoldas {
             }
         });
         fs.writeFileSync("sikeres.txt", t2.join("\r\n"));
+        return t2.join("\r\n");
     }
     constructor() {
         fs.readFileSync("hivas.txt")
